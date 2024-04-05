@@ -6,6 +6,7 @@ This is a single-vendor e-commerce web application built using Django and React,
 
 - **Backend**: Django
 - **Frontend**: React
+- **Frontend State Management**: Redux with React Redux and Thunk
 - **Frontend Styling**: React Bootstrap, Lux theme
 - **Database**: SQLite3
 
