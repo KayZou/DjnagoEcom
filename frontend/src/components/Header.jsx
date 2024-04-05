@@ -28,7 +28,7 @@ function Header() {
                 </span>
               </LinkContainer>
               <LinkContainer to="/login">
-                <span className="d-inline-flex align-items-center">
+                <span className="d-inline-flex align-items-center ">
                   <i className="fa-solid fa-right-to-bracket"></i>
                   <span className="ms-2">Login</span>{" "}
                   {/* Added ms-2 for margin */}
