@@ -1,4 +1,4 @@
-# E-commerce Web App
+# DjangoEcom
 
 This is a single-vendor e-commerce web application built using Django and React, with React Bootstrap and the Lux theme for frontend styling.
 
