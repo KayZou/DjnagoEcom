@@ -1,0 +1,122 @@
+products = [
+    {
+      "_id": "1",
+      "name": "Seirpods Wireless Bluetooth Headphones",
+      "image": "https://thealmanian.com/wp-content/uploads/2019/01/product_image_thumbnail_placeholder.png",
+      "description": "Bluetooth technology lets you connect it with compatible devices",
+      "brand": "Apple",
+      "category": "Electronics",
+      "price": 89.99,
+      "countInStock": 10,
+      "rating": 4.5,
+      "numReviews": 12
+    },
+    {
+      "_id": "2",
+      "name": "Smartwatch X300",
+      "image": "https://thealmanian.com/wp-content/uploads/2019/01/product_image_thumbnail_placeholder.png",
+      "description": "Stay connected with notifications and fitness tracking",
+      "brand": "TechGizmo",
+      "category": "Electronics",
+      "price": 129.99,
+      "countInStock": 5,
+      "rating": 4.0,
+      "numReviews": 8
+    },
+    {
+      "_id": "3",
+      "name": "Ultra HD 4K TV",
+      "image": "https://thealmanian.com/wp-content/uploads/2019/01/product_image_thumbnail_placeholder.png",
+      "description": "Immerse yourself in stunning visuals with 4K resolution",
+      "brand": "Sony",
+      "category": "Electronics",
+      "price": 799.99,
+      "countInStock": 3,
+      "rating": 4.8,
+      "numReviews": 15
+    },
+    {
+      "_id": "4",
+      "name": "Wireless Gaming Mouse",
+      "image": "https://thealmanian.com/wp-content/uploads/2019/01/product_image_thumbnail_placeholder.png",
+      "description": "Experience lag-free gaming with ultra-fast wireless technology",
+      "brand": "Razer",
+      "category": "Electronics",
+      "price": 49.99,
+      "countInStock": 20,
+      "rating": 4.6,
+      "numReviews": 10
+    },
+    {
+      "_id": "5",
+      "name": "Portable External Hard Drive",
+      "image": "https://thealmanian.com/wp-content/uploads/2019/01/product_image_thumbnail_placeholder.png",
+      "description": "Store and backup your files with ease",
+      "brand": "Western Digital",
+      "category": "Electronics",
+      "price": 79.99,
+      "countInStock": 8,
+      "rating": 4.7,
+      "numReviews": 18
+    },
+    {
+      "_id": "6",
+      "name": "Wireless Charging Pad",
+      "image": "https://thealmanian.com/wp-content/uploads/2019/01/product_image_thumbnail_placeholder.png",
+      "description": "Charge your compatible devices wirelessly",
+      "brand": "Samsung",
+      "category": "Electronics",
+      "price": 29.99,
+      "countInStock": 15,
+      "rating": 4.3,
+      "numReviews": 7
+    },
+    {
+      "_id": "7",
+      "name": "Noise-Canceling Headphones",
+      "image": "https://thealmanian.com/wp-content/uploads/2019/01/product_image_thumbnail_placeholder.png",
+      "description": "Block out unwanted noise for immersive listening experience",
+      "brand": "Bose",
+      "category": "Electronics",
+      "price": 199.99,
+      "countInStock": 6,
+      "rating": 4.9,
+      "numReviews": 20
+    },
+    {
+      "_id": "8",
+      "name": "Digital Camera EOS",
+      "image": "https://thealmanian.com/wp-content/uploads/2019/01/product_image_thumbnail_placeholder.png",
+      "description": "Capture stunning photos and videos with professional quality",
+      "brand": "Canon",
+      "category": "Electronics",
+      "price": 699.99,
+      "countInStock": 4,
+      "rating": 4.8,
+      "numReviews": 25
+    },
+    {
+      "_id": "9",
+      "name": "Bluetooth Speaker",
+      "image": "https://thealmanian.com/wp-content/uploads/2019/01/product_image_thumbnail_placeholder.png",
+      "description": "Enjoy your favorite music wirelessly with high-quality sound",
+      "brand": "JBL",
+      "category": "Electronics",
+      "price": 149.99,
+      "countInStock": 7,
+      "rating": 4.6,
+      "numReviews": 14
+    },
+    {
+      "_id": "10",
+      "name": "Fitness Tracker Band",
+      "image": "https://thealmanian.com/wp-content/uploads/2019/01/product_image_thumbnail_placeholder.png",
+      "description": "Track your fitness goals and monitor your health stats",
+      "brand": "Fitbit",
+      "category": "Electronics",
+      "price": 79.99,
+      "countInStock": 0,
+      "rating": 4.4,
+      "numReviews": 9
+    }
+  ]
