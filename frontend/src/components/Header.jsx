@@ -6,11 +6,13 @@ import Navbar from "react-bootstrap/Navbar";
 import NavDropdown from "react-bootstrap/NavDropdown";
 import { LinkContainer } from "react-router-bootstrap";
 import { useDispatch, useSelector } from "react-redux";
+import { Link, useNavigate } from "react-router-dom";
 import { logout } from "../actions/userActions";
 
 function Header() {
   const dispatch = useDispatch();
   const { userInfo } = useSelector((state) => state.userLogin);
+  const navigate = useNavigate();
 
   return (
     <header>
@@ -40,7 +42,12 @@ function Header() {
                       <span className="ms-2">Profile</span>
                     </NavDropdown.Item>
                   </LinkContainer>
-                  <NavDropdown.Item onClick={() => dispatch(logout())}>
+                  <NavDropdown.Item
+                    onClick={() => {
+                      dispatch(logout());
+                      navigate("/");
+                    }}
+                  >
                     <i className="fa-solid fa-right-from-bracket"></i>
                     <span className="ms-2">Logout</span>
                   </NavDropdown.Item>
@@ -52,6 +59,28 @@ function Header() {
                     <span className="ms-2">Login</span>{" "}
                   </span>
                 </LinkContainer>
+              )}
+              {userInfo && userInfo.isAdmin && (
+                <NavDropdown title="Admin" id="navbarScrollingDropdown">
+                  <LinkContainer to="/admin/userlist">
+                    <NavDropdown.Item>
+                      <i className="fa-solid fa-user"></i>
+                      <span className="ms-2">Users</span>
+                    </NavDropdown.Item>
+                  </LinkContainer>
+                  <LinkContainer to="/admin/productlist">
+                    <NavDropdown.Item>
+                      <i className="fa-solid fa-box"></i>
+                      <span className="ms-2">Products</span>
+                    </NavDropdown.Item>
+                  </LinkContainer>
+                  <LinkContainer to="/admin/orderlist">
+                    <NavDropdown.Item>
+                      <i className="fa-regular fa-envelope"></i>
+                      <span className="ms-2">Orders</span>
+                    </NavDropdown.Item>
+                  </LinkContainer>
+                </NavDropdown>
               )}
             </Nav>
 

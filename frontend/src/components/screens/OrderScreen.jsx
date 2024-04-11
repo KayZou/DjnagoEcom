@@ -13,7 +13,7 @@ function OrderScreen() {
   const navigate = useNavigate();
 
   const [message, setMessage] = useState("");
-const [refresh, setRefresh] = useState(false)
+  const [refresh, setRefresh] = useState(false);
 
   const { order, error, loading } = useSelector((state) => state.orderDetails);
 
@@ -29,11 +29,11 @@ const [refresh, setRefresh] = useState(false)
 
   useEffect(() => {
     if (!order || order._id !== Number(id) || refresh) {
-      dispatch({type: ORDER_PAY_RESET})
+      dispatch({ type: ORDER_PAY_RESET });
       dispatch(getOrderDetails(id));
-      setRefresh(false)
+      setRefresh(false);
     }
-  }, [successPay,dispatch, order, id, refresh]);
+  }, [successPay, dispatch, order, id, refresh]);
 
   async function handlePayment(e, paymentResult) {
     e.preventDefault();

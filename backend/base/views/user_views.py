@@ -74,3 +74,29 @@ def getUsers(req):
     users = User.objects.all()
     serializer = UserSerializer(users, many=True)
     return Response(serializer.data)
+
+@api_view(["DELETE"])
+@permission_classes([IsAdminUser])
+def deleteUser(req, pk):
+    user = User.objects.get(id=pk)
+    user.delete()
+    return Response("User deleted successfully")
+
+@api_view(["GET"])
+@permission_classes([IsAdminUser])
+def getUserById(req, pk):
+    user = User.objects.get(id=pk)
+    serializer = UserSerializer(user, many=False)
+    return Response(serializer.data)
+
+@api_view(["PUT"])
+@permission_classes([IsAdminUser])
+def updateUser(req, pk):
+    user = User.objects.get(id=pk)
+    serializer = UserSerializer(user, many=False)
+    data = req.data
+    user.first_name = data["name"]
+    user.username = data["email"]
+    user.is_staff = data["isAdmin"]
+    user.save()
+    return Response(serializer.data)

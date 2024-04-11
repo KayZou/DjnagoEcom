@@ -12,6 +12,8 @@ import ShippingScreen from "./components/screens/ShippingScreen";
 import PaymentScreen from "./components/screens/PaymentScreen";
 import PlaceOrderScreen from "./components/screens/PlaceOrderScreen";
 import OrderScreen from "./components/screens/OrderScreen";
+import UserListScreen from "./components/screens/UserListScreen";
+import UserEditScreen from "./components/screens/UserEditScreen";
 import Footer from "./components/Footer";
 import Header from "./components/Header";
 
@@ -31,6 +33,9 @@ function App() {
           <Route path="/order/:id" element={<OrderScreen />} />
           <Route path="/product/:id" element={<ProductScreen />} />
           <Route path="/cart/:id?" element={<CartScreen />} />
+
+          <Route path="/admin/userlist" element={<UserListScreen />} />
+          <Route path="/admin/user/:id/edit" element={<UserEditScreen />} />
         </Routes>
       </Container>
       <Footer />
