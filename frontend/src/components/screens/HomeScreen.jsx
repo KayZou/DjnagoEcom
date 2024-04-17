@@ -1,20 +1,31 @@
 import { Row, Col } from "react-bootstrap";
 import Product from "../Product";
 import { useDispatch, useSelector } from "react-redux";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { listProducts } from "../../actions/productActions";
 import Loader from "../Loader";
 import Message from "../Message";
+import { useParams, useLocation } from "react-router-dom";
+import Paginate from "../Paginate";
 
 function HomeScreen() {
+  const { search: urlSearch } = useLocation();
+
   const dispatch = useDispatch();
-  const { products, loading, error } = useSelector(
+
+  const { products, loading, error, pages, page } = useSelector(
     (state) => state.productList
   );
 
+  const [keyword, setKeyword] = useState("");
+
   useEffect(() => {
-    dispatch(listProducts());
-  }, [dispatch]);
+    setKeyword(new URLSearchParams(urlSearch).get("search") || "");
+  }, [urlSearch]);
+
+  useEffect(() => {
+    dispatch(listProducts(keyword));
+  }, [dispatch, keyword]);
 
   return (
     <>
@@ -33,6 +44,7 @@ function HomeScreen() {
             ))}
         </Row>
       )}
+      {/* <Paginate pages={pages} page={page} search={keyword} /> */}
     </>
   );
 }

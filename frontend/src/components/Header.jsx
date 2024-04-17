@@ -8,6 +8,7 @@ import { LinkContainer } from "react-router-bootstrap";
 import { useDispatch, useSelector } from "react-redux";
 import { Link, useNavigate } from "react-router-dom";
 import { logout } from "../actions/userActions";
+import SearchFrom from "./SearchFrom";
 
 function Header() {
   const dispatch = useDispatch();
@@ -84,15 +85,9 @@ function Header() {
               )}
             </Nav>
 
-            <Form className="d-flex">
-              <Form.Control
-                type="search"
-                placeholder="Search"
-                className="me-2"
-                aria-label="Search"
-              />
-              <Button variant="outline-secondary">Search</Button>
-            </Form>
+            <div className="d-flex">
+              <SearchFrom />
+            </div>
           </Navbar.Collapse>
         </Container>
       </Navbar>
